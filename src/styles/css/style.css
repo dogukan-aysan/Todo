@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  width: var(--desktop-width);
+  margin: 0 auto;
+  background-color: gray;
+}
+
+#root {
+  height: 100vh;
+}
+
+:root {
+  --color-linear-blue: hsl(192, 100%, 67%);
+  --color-linear-pink: hsl(280, 87%, 65%);
+  --color-bright-blue: hsl(220, 98%, 61%);
+  --color-light-gray: hsl(0, 0%, 98%);
+  --color-grayish-blue-light-1: hsl(236, 33%, 92%);
+  --color-grayish-blue-light-2: hsl(233, 11%, 84%);
+  --color-grayish-blue-dark-1: hsl(236, 9%, 61%);
+  --color-grayish-blue-dark-2: hsl(235, 19%, 35%);
+  --font-body-copy: 1.8rem;
+  --font-family: "Josefin Sans", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --letter-spacing-sm: 0.1rem;
+  --letter-spacing-md: 0.3rem;
+  --letter-spacing-lg: 0.5rem;
+  --line-height-sm: 1.2rem;
+  --line-height-md: 1.7rem;
+  --line-height-lg: 2rem;
+  --desktop-width: 144rem;
+  --mobile-width: 37.5rem;
+  --spacing-tiny: 1rem;
+  --spacing-sm: 3rem;
+  --spacing-regular: 5rem;
+  --spacing-md: 10rem;
+  --spacing-lg: 20rem;
+  --spacing-xxl: 35rem;
+  --spacing-huge: 50rem;
+  --radius-tiny: 1rem;
+  --radius-sm: 3rem;
+  --radius-md: 5rem;
+  --radius-lg: 10rem;
+  --radius-huge: 50rem;
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 1rem 5rem rgba(0, 0, 0, 0.04);
+}
+:root .dark-mode {
+  --color-dark-blue: hsl(235, 21%, 11%);
+  --color-dark-desaturated-blue: hsl(235, 24%, 19%);
+  --color-grayish-blue-light-1: hsl(234, 39%, 85%);
+  --color-grayish-blue-light-hover: hsl(236, 33%, 92%);
+  --color-grayish-blue-dark-1: hsl(234, 11%, 52%);
+  --color-grayish-blue-dark-2: hsl(233, 14%, 35%);
+  --color-grayish-blue-dark-3: hsl(237, 14%, 26%);
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -18,7 +18,7 @@ function App() {
       <div className="app__footer">
         <Footer />
       </div>
-      <p className="app__drag-drop">Drag and drop to reorder list</p>
+      <p className="app__drag-drop-message">Drag and drop to reorder list</p>
     </div>
   );
 }

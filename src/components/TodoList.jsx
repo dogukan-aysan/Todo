@@ -1,3 +1,5 @@
+import Todo from "./Todo";
+
 function TodoList() {
   return (
     <div className="todo-list">

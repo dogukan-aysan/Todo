@@ -1,3 +1,5 @@
+import DarkModeToggle from "./DarkModeToggle";
+
 function Header() {
   return (
     <div className="header">

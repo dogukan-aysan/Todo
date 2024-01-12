@@ -1,0 +1,58 @@
+//////////////////////////////////////
+/// APP
+.app {
+  &__header {
+  }
+  &__create-todo {
+  }
+  &__list {
+  }
+  &__footer {
+  }
+  &__drag-drop-message {
+  }
+}
+//////////////////////////////////////
+/// HEADER
+.header {
+  &__heading {
+  }
+  &__dark-mode-toggle {
+  }
+}
+.dark-mode-toggle {
+}
+//////////////////////////////////////
+/// CREATE TODO
+.create-todo {
+}
+//////////////////////////////////////
+/// TODO LIST
+.todo-list {
+  &__item {
+  }
+}
+.todo {
+}
+//////////////////////////////////////
+/// FOOTER
+.footer {
+  &__leftover {
+  }
+  &__filters {
+  }
+  &__clear-completed {
+  }
+}
+.leftover {
+}
+.filters {
+  &__all {
+  }
+  &__active {
+  }
+  &__completed {
+  }
+}
+.clear-completed {
+}
