@@ -1,0 +1,31 @@
+.app {
+  font-size: var(--font-body-copy);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-light-gray);
+  &__drag-drop-message {
+    color: var(--color-grayish-blue-dark-1);
+    font-size: var(--font-size-sm);
+  }
+}
+//////////////////////////////////////
+/// CREATE TODO
+.create-todo {
+  color: var(--color-grayish-blue-dark-1);
+}
+//////////////////////////////////////
+/// TODO
+.todo {
+  &__text {
+    &--checked {
+      text-decoration: line-through;
+      color: var(--color-grayish-blue-dark-2);
+    }
+  }
+}
+//////////////////////////////////////
+/// FOOTER
+.footer {
+  color: var(--color-grayish-blue-dark-1);
+  font-size: var(--font-size-sm);
+}

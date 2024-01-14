@@ -1,5 +1,9 @@
 function DarkModeToggle() {
-  return <div className="dark-mode-toggle">DARK MODE TOGGLE</div>;
+  return (
+    <div className="dark-mode-toggle">
+      <img src="/icon-sun.svg" />
+    </div>
+  );
 }
 
 export default DarkModeToggle;

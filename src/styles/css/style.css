@@ -18,9 +18,124 @@ body {
 }
 
 #root {
-  height: 100vh;
+  height: 100%;
+  background-color: var(--color-dark-blue);
+  background-image: url("/bg-desktop-dark.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
 }
 
+.create-todo {
+  background-color: var(--color-dark-desaturated-blue);
+  border-radius: var(--radius-tiny);
+}
+
+.checkbox {
+  border: 1px solid var(--color-grayish-blue-dark-2);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+}
+.checkbox--checked {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, hsl(280, 87%, 65%), hsl(220, 98%, 61%));
+}
+
+.footer {
+  background-color: var(--color-dark-desaturated-blue);
+  border-radius: 0 0 var(--radius-tiny) var(--radius-tiny);
+}
+
+.todo {
+  background-color: var(--color-dark-desaturated-blue);
+  border-bottom: 1px solid var(--color-grayish-blue-dark-3);
+}
+
+.app {
+  font-size: var(--font-body-copy);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-light-gray);
+}
+.app__drag-drop-message {
+  color: var(--color-grayish-blue-dark-1);
+  font-size: var(--font-size-sm);
+}
+
+.create-todo {
+  color: var(--color-grayish-blue-dark-1);
+}
+
+.todo__text--checked {
+  text-decoration: line-through;
+  color: var(--color-grayish-blue-dark-2);
+}
+
+.footer {
+  color: var(--color-grayish-blue-dark-1);
+  font-size: var(--font-size-sm);
+}
+
+.app {
+  height: 80%;
+  width: 45%;
+  margin: 0 auto;
+  padding: calc(var(--spacing-md) * 0.8) var(--spacing-regular);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app > div {
+  width: 100%;
+}
+.app__drag-drop-message {
+  margin-top: var(--spacing-regular);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: calc(var(--spacing-regular) * 0.7);
+}
+.create-todo {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-sm) * 0.7);
+  padding: calc(var(--spacing-tiny) * 2.3);
+  margin-bottom: var(--spacing-sm);
+}
+.create-todo__text {
+  position: relative;
+  top: calc(var(--spacing-tiny) * 0.1);
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-sm) * 0.7);
+  padding: calc(var(--spacing-tiny) * 2.3);
+}
+.todo__text {
+  position: relative;
+  top: calc(var(--spacing-tiny) * 0.1);
+}
+
+.checkbox {
+  height: calc(var(--spacing-sm) * 0.7);
+  width: calc(var(--spacing-sm) * 0.7);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: calc(var(--spacing-tiny) * 1.7);
+}
+.filters {
+  display: flex;
+  justify-content: space-around;
+  gap: var(--spacing-tiny);
+}
 :root {
   --color-linear-blue: hsl(192, 100%, 67%);
   --color-linear-pink: hsl(280, 87%, 65%);
@@ -31,6 +146,7 @@ body {
   --color-grayish-blue-dark-1: hsl(236, 9%, 61%);
   --color-grayish-blue-dark-2: hsl(235, 19%, 35%);
   --font-body-copy: 1.8rem;
+  --font-size-sm: 1.3rem;
   --font-family: "Josefin Sans", sans-serif;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
@@ -49,8 +165,8 @@ body {
   --spacing-lg: 20rem;
   --spacing-xxl: 35rem;
   --spacing-huge: 50rem;
-  --radius-tiny: 1rem;
-  --radius-sm: 3rem;
+  --radius-tiny: 0.6rem;
+  --radius-sm: 2rem;
   --radius-md: 5rem;
   --radius-lg: 10rem;
   --radius-huge: 50rem;
