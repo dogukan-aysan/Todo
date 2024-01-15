@@ -19,19 +19,19 @@ body {
 
 #root {
   height: 100%;
-  background-color: var(--color-dark-blue);
-  background-image: url("/bg-desktop-dark.jpg");
+  background-color: var(--color-app-background);
+  background-image: url("/bg-desktop-light.jpg");
   background-repeat: no-repeat;
   background-position: 100% 0;
 }
 
 .create-todo {
-  background-color: var(--color-dark-desaturated-blue);
+  background-color: var(--color-todo-background);
   border-radius: var(--radius-tiny);
 }
 
 .checkbox {
-  border: 1px solid var(--color-grayish-blue-dark-2);
+  border: 1px solid var(--color-checkbox-border);
   border-radius: var(--radius-lg);
   cursor: pointer;
 }
@@ -43,12 +43,12 @@ body {
 }
 
 .footer {
-  background-color: var(--color-dark-desaturated-blue);
+  background-color: var(--color-todo-background);
   border-radius: 0 0 var(--radius-tiny) var(--radius-tiny);
 }
 
 .todo {
-  background-color: var(--color-dark-desaturated-blue);
+  background-color: var(--color-todo-background);
   border-bottom: 1px solid var(--color-grayish-blue-dark-3);
 }
 
@@ -56,25 +56,32 @@ body {
   font-size: var(--font-body-copy);
   font-family: var(--font-family);
   font-weight: var(--font-weight-regular);
-  color: var(--color-light-gray);
+  color: var(--color-regular);
 }
 .app__drag-drop-message {
-  color: var(--color-grayish-blue-dark-1);
+  color: var(--color--light-grey);
   font-size: var(--font-size-sm);
 }
 
 .create-todo {
-  color: var(--color-grayish-blue-dark-1);
+  color: var(--color--light-grey);
 }
 
+.todo__text {
+  color: var(--color-unchecked-todo-font);
+}
 .todo__text--checked {
   text-decoration: line-through;
-  color: var(--color-grayish-blue-dark-2);
+  color: var(--color-checked-todo-font);
 }
 
 .footer {
-  color: var(--color-grayish-blue-dark-1);
+  color: var(--color--light-grey);
   font-size: var(--font-size-sm);
+}
+
+.dark-mode-toggle {
+  cursor: pointer;
 }
 
 .app {
@@ -140,11 +147,13 @@ body {
   --color-linear-blue: hsl(192, 100%, 67%);
   --color-linear-pink: hsl(280, 87%, 65%);
   --color-bright-blue: hsl(220, 98%, 61%);
-  --color-light-gray: hsl(0, 0%, 98%);
-  --color-grayish-blue-light-1: hsl(236, 33%, 92%);
-  --color-grayish-blue-light-2: hsl(233, 11%, 84%);
-  --color-grayish-blue-dark-1: hsl(236, 9%, 61%);
-  --color-grayish-blue-dark-2: hsl(235, 19%, 35%);
+  --color-regular: hsl(0, 0%, 98%);
+  --color-app-background: hsl(236, 33%, 92%);
+  --color-todo-background: hsl(0, 0%, 98%);
+  --color-unchecked-todo-font: hsl(237, 14%, 26%);
+  --color-checked-todo-font: hsl(233, 11%, 84%);
+  --color-checkbox-border: hsl(233, 11%, 84%);
+  --color--light-grey: hsl(236, 9%, 61%);
   --font-body-copy: 1.8rem;
   --font-size-sm: 1.3rem;
   --font-family: "Josefin Sans", sans-serif;
@@ -174,13 +183,11 @@ body {
   --shadow-light: 0 1rem 5rem rgba(0, 0, 0, 0.04);
 }
 :root .dark-mode {
-  --color-dark-blue: hsl(235, 21%, 11%);
-  --color-dark-desaturated-blue: hsl(235, 24%, 19%);
-  --color-grayish-blue-light-1: hsl(234, 39%, 85%);
-  --color-grayish-blue-light-hover: hsl(236, 33%, 92%);
-  --color-grayish-blue-dark-1: hsl(234, 11%, 52%);
-  --color-grayish-blue-dark-2: hsl(233, 14%, 35%);
-  --color-grayish-blue-dark-3: hsl(237, 14%, 26%);
+  --color-app-background: hsl(235, 21%, 11%);
+  --color-todo-background: hsl(235, 24%, 19%);
+  --color-unchecked-todo-font: hsl(236, 33%, 92%)
+  --color-checkbox-border: hsl(233, 14%, 35%);
+  --color-checked-todo-font: hsl(235, 19%, 35%);
 }
 
 /*# sourceMappingURL=style.css.map */

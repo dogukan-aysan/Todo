@@ -2,30 +2,36 @@
   font-size: var(--font-body-copy);
   font-family: var(--font-family);
   font-weight: var(--font-weight-regular);
-  color: var(--color-light-gray);
+  color: var(--color-regular);
   &__drag-drop-message {
-    color: var(--color-grayish-blue-dark-1);
+    color: var(--color--light-grey);
     font-size: var(--font-size-sm);
   }
 }
 //////////////////////////////////////
 /// CREATE TODO
 .create-todo {
-  color: var(--color-grayish-blue-dark-1);
+  color: var(--color--light-grey);
 }
 //////////////////////////////////////
 /// TODO
 .todo {
   &__text {
+    color: var(--color-unchecked-todo-font);
     &--checked {
       text-decoration: line-through;
-      color: var(--color-grayish-blue-dark-2);
+      color: var(--color-checked-todo-font);
     }
   }
 }
 //////////////////////////////////////
 /// FOOTER
 .footer {
-  color: var(--color-grayish-blue-dark-1);
+  color: var(--color--light-grey);
   font-size: var(--font-size-sm);
+}
+//////////////////////////////////////
+/// DARK MODE TOGGLE
+.dark-mode-toggle {
+  cursor: pointer;
 }

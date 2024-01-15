@@ -3,19 +3,21 @@
   --color-linear-blue: hsl(192, 100%, 67%);
   --color-linear-pink: hsl(280, 87%, 65%);
   --color-bright-blue: hsl(220, 98%, 61%);
-  --color-light-gray: hsl(0, 0%, 98%);
-  --color-grayish-blue-light-1: hsl(236, 33%, 92%);
-  --color-grayish-blue-light-2: hsl(233, 11%, 84%);
-  --color-grayish-blue-dark-1: hsl(236, 9%, 61%);
-  --color-grayish-blue-dark-2: hsl(235, 19%, 35%);
+
+  --color-regular: hsl(0, 0%, 98%);
+  --color-app-background: hsl(236, 33%, 92%);
+  --color-todo-background: hsl(0, 0%, 98%);
+  --color-unchecked-todo-font: hsl(237, 14%, 26%);
+  --color-checked-todo-font: hsl(233, 11%, 84%);
+  --color-checkbox-border: hsl(233, 11%, 84%);
+  --color--light-grey: hsl(236, 9%, 61%);
+
   .dark-mode {
-    --color-dark-blue: hsl(235, 21%, 11%);
-    --color-dark-desaturated-blue: hsl(235, 24%, 19%);
-    --color-grayish-blue-light-1: hsl(234, 39%, 85%);
-    --color-grayish-blue-light-hover: hsl(236, 33%, 92%);
-    --color-grayish-blue-dark-1: hsl(234, 11%, 52%);
-    --color-grayish-blue-dark-2: hsl(233, 14%, 35%);
-    --color-grayish-blue-dark-3: hsl(237, 14%, 26%);
+    --color-app-background: hsl(235, 21%, 11%);
+    --color-todo-background: hsl(235, 24%, 19%);
+    --color-unchecked-todo-font: hsl(236, 33%, 92%)
+    --color-checkbox-border: hsl(233, 14%, 35%);
+    --color-checked-todo-font: hsl(235, 19%, 35%);
   }
   // TYPOGRAPHY
   --font-body-copy: 1.8rem;
