@@ -14,6 +14,11 @@ function reducer(state, action) {
       return;
     case "todos/clear":
       return { ...state, todos: [] };
+    case "toggleTheme":
+      return { ...state, isDark: !state.isDark };
+    default: {
+      throw Error("Unknown action: " + action.type);
+    }
   }
 }
 
@@ -21,7 +26,6 @@ const Context = createContext();
 
 function ContextProvider({ children }) {
   const [{ todos, isDark }, dispatch] = useReducer(reducer, initialState);
-
   const addNewTodo = (newTodo) => {
     todos.push(newTodo);
     dispatch({ type: "todos/add", payload: todos });
@@ -32,9 +36,11 @@ function ContextProvider({ children }) {
   };
 
   return (
-    <ContextProvider value={{ todos, isDark, addNewTodo, removeTodo }}>
+    <Context.Provider
+      value={{ todos, isDark, addNewTodo, removeTodo, dispatch }}
+    >
       {children}
-    </ContextProvider>
+    </Context.Provider>
   );
 }
 
