@@ -33,6 +33,16 @@ body {
   background-color: var(--color-todo-background);
   border-radius: var(--radius-tiny);
 }
+.create-todo__add-button {
+  border: 1px solid var(--color-checkbox-border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+}
+.create-todo__text {
+  background-color: var(--color-todo-background);
+  border: none;
+  outline: none;
+}
 
 .checkbox {
   border: 1px solid var(--color-checkbox-border);
@@ -63,12 +73,13 @@ body {
   color: var(--color-regular);
 }
 .app__drag-drop-message {
-  color: var(--color--light-grey);
+  color: var(--color-light-grey);
   font-size: var(--font-size-sm);
 }
 
-.create-todo {
-  color: var(--color--light-grey);
+.create-todo__text {
+  font: inherit;
+  color: var(--color-add-new-todo);
 }
 
 .todo__text {
@@ -80,7 +91,7 @@ body {
 }
 
 .footer {
-  color: var(--color--light-grey);
+  color: var(--color-light-grey);
   font-size: var(--font-size-sm);
 }
 
@@ -116,9 +127,18 @@ body {
   padding: calc(var(--spacing-tiny) * 2.3);
   margin-bottom: var(--spacing-sm);
 }
+.create-todo__add-button {
+  height: calc(var(--spacing-sm) * 0.7);
+  width: calc(var(--spacing-sm) * 0.7);
+}
+.create-todo__add-button:hover {
+  transform: translateY(-3%);
+  opacity: 0.7;
+}
 .create-todo__text {
   position: relative;
   top: calc(var(--spacing-tiny) * 0.1);
+  width: 100%;
 }
 
 .todo {
@@ -130,6 +150,10 @@ body {
 .todo__text {
   position: relative;
   top: calc(var(--spacing-tiny) * 0.1);
+}
+.todo__cross {
+  cursor: pointer;
+  margin-left: auto;
 }
 
 .checkbox {
@@ -157,7 +181,8 @@ body {
   --color-unchecked-todo-font: hsl(237, 14%, 26%);
   --color-checked-todo-font: hsl(233, 11%, 84%);
   --color-checkbox-border: hsl(233, 11%, 84%);
-  --color--light-grey: hsl(236, 9%, 61%);
+  --color-add-new-todo: hsl(237, 14%, 26%);
+  --color-light-grey: hsl(236, 9%, 61%);
   --font-body-copy: 1.8rem;
   --font-size-sm: 1.3rem;
   --font-family: "Josefin Sans", sans-serif;
@@ -192,6 +217,7 @@ body {
   --color-unchecked-todo-font: hsl(236, 33%, 92%)
   --color-checkbox-border: hsl(233, 14%, 35%);
   --color-checked-todo-font: hsl(235, 19%, 35%);
+  --color-add-new-todo: hsl(236, 9%, 61%);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -44,9 +44,18 @@
   gap: calc(var(--spacing-sm) * 0.7);
   padding: calc(var(--spacing-tiny) * 2.3);
   margin-bottom: var(--spacing-sm);
+  &__add-button {
+    height: calc(var(--spacing-sm) * 0.7);
+    width: calc(var(--spacing-sm) * 0.7);
+    &:hover {
+      transform: translateY(-3%);
+      opacity: 0.7;
+    }
+  }
   &__text {
     position: relative;
     top: calc(var(--spacing-tiny) * 0.1);
+    width: 100%;
   }
 }
 //////////////////////////////////////
@@ -63,6 +72,11 @@
   &__text {
     position: relative;
     top: calc(var(--spacing-tiny) * 0.1);
+  }
+  &__cross {
+    // display: none;
+    cursor: pointer;
+    margin-left: auto;
   }
 }
 .checkbox {

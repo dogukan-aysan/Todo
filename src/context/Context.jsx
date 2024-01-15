@@ -3,15 +3,14 @@ import { createContext } from "react";
 
 const initialState = {
   todos: [],
+  filter: "all",
   isDark: false,
 };
 
 function reducer(state, action) {
   switch (action.type) {
-    case "todos/add":
+    case "todos/update":
       return { ...state, todos: action.payload };
-    case "todos/remove":
-      return;
     case "todos/clear":
       return { ...state, todos: [] };
     case "toggleTheme":
@@ -25,19 +24,40 @@ function reducer(state, action) {
 const Context = createContext();
 
 function ContextProvider({ children }) {
-  const [{ todos, isDark }, dispatch] = useReducer(reducer, initialState);
+  const [{ todos, isDark, filter }, dispatch] = useReducer(
+    reducer,
+    initialState
+  );
   const addNewTodo = (newTodo) => {
     todos.push(newTodo);
-    dispatch({ type: "todos/add", payload: todos });
+    dispatch({ type: "todos/update", payload: todos });
   };
   const removeTodo = (id) => {
     const updatedTodos = todos.filter((todo) => todo.id !== id);
-    dispatch({ type: "todos/remove", payload: updatedTodos });
+    dispatch({ type: "todos/update", payload: updatedTodos });
+  };
+
+  const toggleTodoComplete = (id) => {
+    const updatedTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        todo.isCompleted = !todo.isCompleted;
+      }
+      return todo;
+    });
+    dispatch({ type: "todos/update", payload: updatedTodos });
   };
 
   return (
     <Context.Provider
-      value={{ todos, isDark, addNewTodo, removeTodo, dispatch }}
+      value={{
+        todos,
+        isDark,
+        filter,
+        addNewTodo,
+        removeTodo,
+        toggleTodoComplete,
+        dispatch,
+      }}
     >
       {children}
     </Context.Provider>

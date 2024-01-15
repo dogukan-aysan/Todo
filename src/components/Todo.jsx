@@ -1,12 +1,24 @@
+import { useContext } from "react";
 import Checkbox from "./Checkbox";
+import { Context } from "../context/Context";
 
-function Todo() {
+function Todo({ todo }) {
+  const { removeTodo } = useContext(Context);
   return (
     <div className="todo">
       <span className="todo__checkbox">
-        <Checkbox />
+        <Checkbox id={todo.id} />
       </span>
-      <span className="todo__text">Jog around the park 3x</span>
+      <span
+        className={`todo__text${
+          todo.isCompleted ? " todo__text--checked" : ""
+        } `}
+      >
+        {todo.text}
+      </span>
+      <span className="todo__cross" onClick={() => removeTodo(todo.id)}>
+        <img src="/icon-cross.svg" />
+      </span>
     </div>
   );
 }

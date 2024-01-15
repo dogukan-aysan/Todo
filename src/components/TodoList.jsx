@@ -1,17 +1,16 @@
+import { useContext } from "react";
 import Todo from "./Todo";
+import { Context } from "../context/Context";
 
 function TodoList() {
+  const { todos } = useContext(Context);
   return (
     <div className="todo-list">
-      <div className="todo-list__item">
-        <Todo />
-      </div>
-      <div className="todo-list__item">
-        <Todo />
-      </div>
-      <div className="todo-list__item">
-        <Todo />
-      </div>
+      {todos.map((todo) => (
+        <div className="todo-list__item" key={todo.id}>
+          <Todo todo={todo} />
+        </div>
+      ))}
     </div>
   );
 }
