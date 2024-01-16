@@ -1,5 +1,9 @@
+import { useContext } from "react";
+import { Context } from "../context/Context";
+
 function Leftover() {
-  return <div className="leftover">5 items left</div>;
+  const { leftoverCount } = useContext(Context);
+  return <div className="leftover">{leftoverCount} items left</div>;
 }
 
 export default Leftover;

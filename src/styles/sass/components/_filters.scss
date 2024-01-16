@@ -1,0 +1,10 @@
+.filters {
+  &__all,
+  &__active,
+  &__completed {
+    cursor: pointer;
+    &--active {
+      color: var(--color-bright-blue);
+    }
+  }
+}

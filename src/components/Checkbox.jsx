@@ -1,18 +1,16 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Context } from "../context/Context";
-function Checkbox({ id }) {
-  const [isChecked, setIsChecked] = useState(false);
+function Checkbox({ todo }) {
   const { toggleTodoComplete } = useContext(Context);
   const handleClick = () => {
-    setIsChecked(!isChecked);
-    toggleTodoComplete(id);
+    toggleTodoComplete(todo.id);
   };
   return (
     <div
-      className={`checkbox${isChecked ? " checkbox--checked" : ""}`}
+      className={`checkbox${todo.isCompleted ? " checkbox--checked" : ""}`}
       onClick={handleClick}
     >
-      {isChecked && <img src="/icon-check.svg" />}
+      {todo.isCompleted && <img src="/icon-check.svg" />}
     </div>
   );
 }

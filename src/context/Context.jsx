@@ -5,16 +5,26 @@ const initialState = {
   todos: [],
   filter: "all",
   isDark: false,
+  leftoverCount: 0,
 };
 
 function reducer(state, action) {
   switch (action.type) {
     case "todos/update":
-      return { ...state, todos: action.payload };
+      return {
+        ...state,
+        todos: action.payload,
+        leftoverCount: action.payload.filter((todo) => !todo?.isCompleted)
+          .length,
+      };
     case "todos/clear":
-      return { ...state, todos: [] };
+      return { ...state, todos: [], leftoverCount: 0 };
     case "toggleTheme":
       return { ...state, isDark: !state.isDark };
+    case "filterChange":
+      return { ...state, filter: action.payload };
+    case "updateLeftoverCount":
+      return { ...state, leftoverCount: action.payload };
     default: {
       throw Error("Unknown action: " + action.type);
     }
@@ -24,7 +34,7 @@ function reducer(state, action) {
 const Context = createContext();
 
 function ContextProvider({ children }) {
-  const [{ todos, isDark, filter }, dispatch] = useReducer(
+  const [{ todos, isDark, filter, leftoverCount }, dispatch] = useReducer(
     reducer,
     initialState
   );
@@ -53,6 +63,7 @@ function ContextProvider({ children }) {
         todos,
         isDark,
         filter,
+        leftoverCount,
         addNewTodo,
         removeTodo,
         toggleTodoComplete,

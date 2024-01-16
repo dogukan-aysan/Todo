@@ -1,5 +1,16 @@
+import { useContext } from "react";
+import { Context } from "../context/Context";
+
 function ClearCompleted() {
-  return <div className="clear-completed">Clear Completed</div>;
+  const { dispatch } = useContext(Context);
+  return (
+    <div
+      className="clear-completed"
+      onClick={() => dispatch({ type: "todos/clear" })}
+    >
+      Clear Completed
+    </div>
+  );
 }
 
 export default ClearCompleted;

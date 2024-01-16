@@ -7,12 +7,12 @@ function Todo({ todo }) {
   return (
     <div className="todo">
       <span className="todo__checkbox">
-        <Checkbox id={todo.id} />
+        <Checkbox todo={todo} />
       </span>
       <span
         className={`todo__text${
           todo.isCompleted ? " todo__text--checked" : ""
-        } `}
+        }`}
       >
         {todo.text}
       </span>
