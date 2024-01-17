@@ -15,6 +15,11 @@ function CreateTodo() {
       setTodo("");
     }
   };
+  const handleEnterPress = (e) => {
+    if (e.key === "Enter") {
+      handleAddClick();
+    }
+  };
   return (
     <>
       <div className="create-todo__circle" onClick={handleAddClick}></div>
@@ -24,6 +29,7 @@ function CreateTodo() {
         placeholder="Create a new todo..."
         value={todo}
         onChange={(e) => setTodo(e.target.value)}
+        onKeyDown={handleEnterPress}
       />
     </>
   );
