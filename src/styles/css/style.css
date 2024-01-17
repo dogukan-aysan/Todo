@@ -30,18 +30,14 @@ body {
 }
 
 .create-todo {
+  border: none;
   background-color: var(--color-todo-background);
   border-radius: var(--radius-tiny);
 }
-.create-todo__add-button {
+.create-todo__circle {
   border: 1px solid var(--color-checkbox-border);
   border-radius: var(--radius-lg);
   cursor: pointer;
-}
-.create-todo__text {
-  background-color: var(--color-todo-background);
-  border: none;
-  outline: none;
 }
 
 .checkbox {
@@ -73,7 +69,7 @@ body {
 
 .todo {
   background-color: var(--color-todo-background);
-  border-bottom: 1px solid var(--color-grayish-blue-dark-3);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .app {
@@ -87,7 +83,7 @@ body {
   font-size: var(--font-size-sm);
 }
 
-.create-todo__text {
+.create-todo {
   font: inherit;
   color: var(--color-add-new-todo);
 }
@@ -121,6 +117,9 @@ body {
 .app > div {
   width: 100%;
 }
+.app__create-todo {
+  position: relative;
+}
 .app__drag-drop-message {
   margin-top: var(--spacing-regular);
 }
@@ -131,24 +130,20 @@ body {
   margin-bottom: calc(var(--spacing-regular) * 0.7);
 }
 .create-todo {
-  display: flex;
-  align-items: center;
-  gap: calc(var(--spacing-sm) * 0.7);
-  padding: calc(var(--spacing-tiny) * 2.3);
+  width: 100%;
+  padding: calc(var(--spacing-tiny) * 2.3) 6.4rem;
   margin-bottom: var(--spacing-sm);
 }
-.create-todo__add-button {
+.create-todo__circle {
+  position: absolute;
+  top: 21%;
+  left: calc(var(--spacing-tiny) * 2.3);
   height: calc(var(--spacing-sm) * 0.7);
   width: calc(var(--spacing-sm) * 0.7);
 }
-.create-todo__add-button:hover {
+.create-todo__circle:hover {
   transform: translateY(-3%);
   opacity: 0.7;
-}
-.create-todo__text {
-  position: relative;
-  top: calc(var(--spacing-tiny) * 0.1);
-  width: 100%;
 }
 
 .todo {
@@ -193,6 +188,7 @@ body {
   --color-checkbox-border: hsl(233, 11%, 84%);
   --color-add-new-todo: hsl(237, 14%, 26%);
   --color-light-grey: hsl(236, 9%, 61%);
+  --color-border: hsl(237, 14%, 26%);
   --font-body-copy: 1.8rem;
   --font-size-sm: 1.3rem;
   --font-family: "Josefin Sans", sans-serif;

@@ -1,14 +1,10 @@
 .create-todo {
+  border: none;
   background-color: var(--color-todo-background);
   border-radius: var(--radius-tiny);
-  &__add-button {
+  &__circle {
     border: 1px solid var(--color-checkbox-border);
     border-radius: var(--radius-lg);
     cursor: pointer;
-  }
-  &__text {
-    background-color: var(--color-todo-background);
-    border: none;
-    outline: none;
   }
 }

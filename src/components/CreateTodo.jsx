@@ -16,16 +16,16 @@ function CreateTodo() {
     }
   };
   return (
-    <div className="create-todo">
-      <div className="create-todo__add-button" onClick={handleAddClick}></div>
+    <>
+      <div className="create-todo__circle" onClick={handleAddClick}></div>
       <input
-        className="create-todo__text"
+        className="create-todo"
         type="text"
         placeholder="Create a new todo..."
         value={todo}
         onChange={(e) => setTodo(e.target.value)}
       />
-    </div>
+    </>
   );
 }
 

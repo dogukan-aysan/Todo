@@ -11,10 +11,8 @@
 //////////////////////////////////////
 /// CREATE TODO
 .create-todo {
-  &__text {
-    font: inherit;
-    color: var(--color-add-new-todo);
-  }
+  font: inherit;
+  color: var(--color-add-new-todo);
 }
 //////////////////////////////////////
 /// TODO

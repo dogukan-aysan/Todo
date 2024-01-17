@@ -18,7 +18,10 @@ function reducer(state, action) {
           .length,
       };
     case "todos/clear":
-      return { ...state, todos: [], leftoverCount: 0 };
+      return {
+        ...state,
+        todos: state.todos.filter((todo) => !todo.isCompleted),
+      };
     case "toggleTheme":
       return { ...state, isDark: !state.isDark };
     case "filterChange":
