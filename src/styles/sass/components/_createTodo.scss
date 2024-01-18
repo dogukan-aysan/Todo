@@ -2,6 +2,10 @@
   border: none;
   background-color: var(--color-todo-background);
   border-radius: var(--radius-tiny);
+  &__circle,
+  &__cross {
+    cursor: pointer;
+  }
   &__circle {
     border: 1px solid var(--color-checkbox-border);
     border-radius: var(--radius-lg);

@@ -14,9 +14,7 @@ function App() {
         <div className="app__create-todo">
           <CreateTodo />
         </div>
-        <div className="app__todo-list">
-          <TodoList />
-        </div>
+        <TodoList />
         <div className="app__footer">
           <Footer />
         </div>
