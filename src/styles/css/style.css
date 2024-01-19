@@ -30,6 +30,10 @@ body {
   background-image: url("/bg-desktop-dark.jpg") !important;
 }
 
+.hidden {
+  display: none;
+}
+
 .create-todo {
   border: none;
   background-color: var(--color-todo-background);

@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 
@@ -9,7 +9,7 @@ function Todo({ todo }) {
   const { removeTodo } = useContext(Context);
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id: todo.id });
-
+  const [isCrossVisible, setIsCrossVisible] = useState(false);
   const style = {
     transition,
     transform: CSS.Transform.toString(transform),
@@ -29,7 +29,8 @@ function Todo({ todo }) {
       ref={setNodeRef}
       {...attributes}
       style={style}
-      onClick={(e) => console.log(e.target)}
+      onPointerEnter={() => setIsCrossVisible(true)}
+      onPointerLeave={() => setIsCrossVisible(false)}
     >
       <Checkbox todo={todo} />
       <div
@@ -40,7 +41,10 @@ function Todo({ todo }) {
       >
         {todo.text}
       </div>
-      <span className="todo__cross" onClick={handleRemove}>
+      <span
+        className={`todo__cross${isCrossVisible ? "" : " hidden"}`}
+        onClick={handleRemove}
+      >
         <img src="/icon-cross.svg" />
       </span>
     </div>
