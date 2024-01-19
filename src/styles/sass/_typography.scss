@@ -22,7 +22,7 @@
 /// TODO
 .todo {
   &__text {
-    color: var(--color-light-grey);
+    color: var(--color-todo-font);
     &--checked {
       text-decoration: line-through;
       color: var(--color-border);

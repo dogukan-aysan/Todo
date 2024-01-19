@@ -133,7 +133,7 @@ body {
 }
 
 .todo__text {
-  color: var(--color-light-grey);
+  color: var(--color-todo-font);
 }
 .todo__text--checked {
   text-decoration: line-through;
@@ -274,11 +274,11 @@ body {
   --color-light-grey: hsl(236, 9%, 61%);
   --color-dark-grey: hsl(0, 0%, 55%);
   --color-regular: hsl(0, 0%, 98%);
-  --color-dark-todo-font: hsl(237, 14%, 26%);
   --color-app-background: hsl(236, 33%, 92%);
   --color-todo-background: hsl(0, 0%, 98%);
   --color-border: hsl(233, 11%, 84%);
   --color-text-hover: rgb(12, 12, 12);
+  --color-todo-font: hsl(237, 14%, 26%);
   --font-body-copy: 1.8rem;
   --font-size-sm: 1.3rem;
   --font-family: "Josefin Sans", sans-serif;
@@ -312,6 +312,7 @@ body {
   --color-todo-background: hsl(235, 24%, 19%);
   --color-border: hsl(237, 14%, 26%);
   --color-text-hover: azure;
+  --color-todo-font: rgba(255, 255, 255, 0.815);
 }
 
 /*# sourceMappingURL=style.css.map */
