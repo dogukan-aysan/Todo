@@ -39,6 +39,12 @@
 .clear-completed {
   opacity: 0.7;
 }
+.clear-completed {
+  cursor: pointer;
+  &:hover {
+    color: var(--color-text-hover);
+  }
+}
 .filters {
   &--mobile {
     color: var(--color-light-grey);
@@ -48,6 +54,9 @@
   &__completed {
     cursor: pointer;
     opacity: 0.7;
+    &:hover {
+      color: var(--color-text-hover);
+    }
     &--active {
       color: var(--color-bright-blue);
     }

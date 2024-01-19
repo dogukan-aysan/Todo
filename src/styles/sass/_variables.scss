@@ -11,11 +11,13 @@
   --color-app-background: hsl(236, 33%, 92%);
   --color-todo-background: hsl(0, 0%, 98%);
   --color-border: hsl(233, 11%, 84%);
+  --color-text-hover: rgb(12, 12, 12);
 
   .dark-mode {
     --color-app-background: hsl(235, 21%, 11%);
     --color-todo-background: hsl(235, 24%, 19%);
     --color-border: hsl(237, 14%, 26%);
+    --color-text-hover: azure;
   }
   // TYPOGRAPHY
   --font-body-copy: 1.8rem;
