@@ -39,13 +39,13 @@ body {
   cursor: pointer;
 }
 .create-todo__circle {
-  border: 1px solid var(--color-checkbox-border);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   cursor: pointer;
 }
 
 .checkbox {
-  border: 1px solid var(--color-checkbox-border);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   cursor: pointer;
 }
@@ -120,16 +120,20 @@ body {
 }
 
 .create-todo {
-  font: inherit;
-  color: var(--color-add-new-todo);
+  font-family: var(--font-family);
+  font-size: var(--font-body-copy);
+  color: var(--color-light-grey);
+}
+.create-todo::placeholder {
+  color: var(--color-light-grey);
 }
 
 .todo__text {
-  color: var(--color-unchecked-todo-font);
+  color: var(--color-light-grey);
 }
 .todo__text--checked {
   text-decoration: line-through;
-  color: var(--color-checked-todo-font);
+  color: var(--color-border);
 }
 
 .footer {
@@ -245,7 +249,7 @@ body {
 }
 .filters--mobile {
   display: none;
-  margin-top: calc(var(--spacing-tiny) * 1.8);
+  margin-top: calc(var(--spacing-tiny) * 3);
   padding: calc(var(--spacing-tiny) * 1.7);
 }
 
@@ -253,16 +257,13 @@ body {
   --color-linear-blue: hsl(192, 100%, 67%);
   --color-linear-pink: hsl(280, 87%, 65%);
   --color-bright-blue: hsl(220, 98%, 61%);
-  --color-regular: hsl(0, 0%, 98%);
-  --color-app-background: hsl(236, 33%, 92%);
-  --color-todo-background: hsl(0, 0%, 98%);
-  --color-unchecked-todo-font: hsl(237, 14%, 26%);
-  --color-checked-todo-font: hsl(233, 11%, 84%);
-  --color-checkbox-border: hsl(233, 11%, 84%);
-  --color-add-new-todo: hsl(237, 14%, 26%);
   --color-light-grey: hsl(236, 9%, 61%);
   --color-dark-grey: hsl(0, 0%, 55%);
-  --color-border: hsl(237, 14%, 26%);
+  --color-regular: hsl(0, 0%, 98%);
+  --color-dark-todo-font: hsl(237, 14%, 26%);
+  --color-app-background: hsl(236, 33%, 92%);
+  --color-todo-background: hsl(0, 0%, 98%);
+  --color-border: hsl(233, 11%, 84%);
   --font-body-copy: 1.8rem;
   --font-size-sm: 1.3rem;
   --font-family: "Josefin Sans", sans-serif;
@@ -294,10 +295,7 @@ body {
 :root .dark-mode {
   --color-app-background: hsl(235, 21%, 11%);
   --color-todo-background: hsl(235, 24%, 19%);
-  --color-unchecked-todo-font: hsl(236, 33%, 92%)
-  --color-checkbox-border: hsl(233, 14%, 35%);
-  --color-checked-todo-font: hsl(235, 19%, 35%);
-  --color-add-new-todo: hsl(236, 9%, 61%);
+  --color-border: hsl(237, 14%, 26%);
 }
 
 /*# sourceMappingURL=style.css.map */

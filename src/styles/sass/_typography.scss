@@ -11,17 +11,21 @@
 //////////////////////////////////////
 /// CREATE TODO
 .create-todo {
-  font: inherit;
-  color: var(--color-add-new-todo);
+  font-family: var(--font-family);
+  font-size: var(--font-body-copy);
+  color: var(--color-light-grey);
+  &::placeholder {
+    color: var(--color-light-grey);
+  }
 }
 //////////////////////////////////////
 /// TODO
 .todo {
   &__text {
-    color: var(--color-unchecked-todo-font);
+    color: var(--color-light-grey);
     &--checked {
       text-decoration: line-through;
-      color: var(--color-checked-todo-font);
+      color: var(--color-border);
     }
   }
 }
