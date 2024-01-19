@@ -67,10 +67,15 @@
 }
 .todo {
   position: relative;
+
   &__text {
     width: 100%;
     height: 100%;
     padding: calc(var(--spacing-tiny) * 2.3) 6.4rem;
+    cursor: grab;
+    &:active {
+      cursor: grabbing;
+    }
   }
   &__cross {
     cursor: pointer;

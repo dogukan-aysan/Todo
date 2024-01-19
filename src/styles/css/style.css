@@ -161,6 +161,10 @@ body {
   width: 100%;
   height: 100%;
   padding: calc(var(--spacing-tiny) * 2.3) 6.4rem;
+  cursor: grab;
+}
+.todo__text:active {
+  cursor: grabbing;
 }
 .todo__cross {
   cursor: pointer;
