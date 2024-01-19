@@ -1,0 +1,30 @@
+@media only screen and (max-width: 1440px) {
+  body {
+    margin: 0 auto;
+    width: var(--mobile-width);
+  }
+  #root {
+    background-size: 100% 33%;
+  }
+  .app {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: calc(var(--spacing-md) * 0.8) var(--spacing-sm) !important;
+  }
+  .create-todo,
+  .todo {
+    font-size: var(--font-size-sm) !important;
+  }
+  .filters {
+    &--desktop {
+      display: none !important;
+    }
+    &--mobile {
+      display: block !important;
+      text-align: center;
+    }
+    &__active {
+      margin: 0 var(--spacing-sm);
+    }
+  }
+}

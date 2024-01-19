@@ -1,4 +1,5 @@
 import CreateTodo from "./components/CreateTodo";
+import FiltersMobile from "./components/FiltersMobile";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import TodoList from "./components/TodoList";
@@ -15,9 +16,8 @@ function App() {
           <CreateTodo />
         </div>
         <TodoList />
-        <div className="app__footer">
-          <Footer />
-        </div>
+        <Footer />
+        <FiltersMobile />
         <p className="app__drag-drop-message">Drag and drop to reorder list</p>
       </div>
     </ContextProvider>

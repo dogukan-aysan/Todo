@@ -11,12 +11,8 @@
   & > div {
     width: 100%;
   }
-  &__header {
-  }
   &__create-todo {
     position: relative;
-  }
-  &__footer {
   }
   &__drag-drop-message {
     margin-top: var(--spacing-regular);
@@ -28,12 +24,6 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: calc(var(--spacing-regular) * 0.7);
-  &__heading {
-  }
-  &__dark-mode-toggle {
-  }
-}
-.dark-mode-toggle {
 }
 //////////////////////////////////////
 /// CREATE TODO
@@ -61,10 +51,6 @@
 }
 //////////////////////////////////////
 /// TODO LIST
-.todo-list {
-  &__item {
-  }
-}
 .todo {
   position: relative;
 
@@ -98,25 +84,17 @@
   display: flex;
   justify-content: space-between;
   padding: calc(var(--spacing-tiny) * 1.7);
-  &__leftover {
-  }
-  &__filters {
-  }
-  &__clear-completed {
-  }
-}
-.leftover {
 }
 .filters {
-  display: flex;
-  justify-content: space-around;
-  gap: var(--spacing-tiny);
-  &__all {
+  &--desktop,
+  &--mobile {
+    display: flex;
+    justify-content: space-around;
+    gap: var(--spacing-tiny);
   }
-  &__active {
+  &--mobile {
+    display: none;
+    margin-top: calc(var(--spacing-tiny) * 1.8);
+    padding: calc(var(--spacing-tiny) * 1.7);
   }
-  &__completed {
-  }
-}
-.clear-completed {
 }

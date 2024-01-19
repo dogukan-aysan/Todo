@@ -5,15 +5,9 @@ import Leftover from "./Leftover";
 function Footer() {
   return (
     <div className="footer">
-      <div className="footer__leftover">
-        <Leftover />
-      </div>
-      <div className="footer__filters">
-        <Filters />
-      </div>
-      <div className="footer__clear-completed">
-        <ClearCompleted />
-      </div>
+      <Leftover />
+      <Filters />
+      <ClearCompleted />
     </div>
   );
 }

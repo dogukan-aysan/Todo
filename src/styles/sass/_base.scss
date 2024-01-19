@@ -22,7 +22,8 @@ body {
   background-color: var(--color-app-background);
   background-image: url("/bg-desktop-light.jpg");
   background-repeat: no-repeat;
-  background-position: 100% 0;
+  background-position: top;
+  background-size: contain;
 }
 
 .dark-mode {

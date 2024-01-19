@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import { Context } from "../context/Context";
 
-function Filters() {
+function FiltersMobile() {
   const { filter, dispatch } = useContext(Context);
   const handleFilterSelection = (selectedFilter) => {
     dispatch({ type: "filterChange", payload: selectedFilter });
   };
   return (
-    <div className="filters--desktop">
+    <div className="filters--mobile">
       <span
         onClick={() => handleFilterSelection("all")}
         className={`filters__all filters__all${
@@ -36,4 +36,4 @@ function Filters() {
   );
 }
 
-export default Filters;
+export default FiltersMobile;
